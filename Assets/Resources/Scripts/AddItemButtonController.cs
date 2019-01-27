@@ -21,6 +21,7 @@ public class AddItemButtonController : MonoBehaviour
     {
         PlayerController.selectedItemMaterial = material;
         PlayerController.selectedItemShape = shape;
+        GameObject.Find("Player").GetComponent<PlayerController>().InventoryItemSelected();
     }
 
 }
