@@ -61,11 +61,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log("items: " + (inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]]));
             if (GameData.mouseOnPlayArea && inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]] > 0)
             {
-                GameObject item = Instantiate(GameData.primitives[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]], Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity, placedObjectParent);
-                item.transform.SetPositionAndRotation(new Vector3(item.transform.position.x, item.transform.position.y, -1), Quaternion.identity);
+                GameObject item = Instantiate(GameData.primitives[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]], Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), heldObject.transform.rotation, placedObjectParent);
+                item.transform.SetPositionAndRotation(new Vector3(item.transform.position.x, item.transform.position.y, -1), item.transform.rotation);
                 inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]]--;
                 DrawInventory();
             }
+        }
+        if (Input.mouseScrollDelta.y != 0 && heldObject != null)
+        {
+            heldObject.transform.Rotate(new Vector3(0, 0, Input.mouseScrollDelta.y * 10));
         }
     }
 
@@ -108,8 +112,6 @@ public class PlayerController : MonoBehaviour
     {
         while(true)
         {
-            
-            Debug.Log("1");
             bool error = false;
             try
             {
@@ -117,11 +119,10 @@ public class PlayerController : MonoBehaviour
                 {
                     Destroy(heldObject);
                 }
-                heldObject.transform.SetPositionAndRotation(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity);
+                heldObject.transform.SetPositionAndRotation(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), heldObject.transform.rotation);
             }
             catch (MissingReferenceException)
             {
-                Debug.Log("error");
                 error = true;
             }
             if (error) yield return null;
