@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class HazardManager : MonoBehaviour
 {
     private GameObject hazards;
-    private Score_Display scoreHolder;
     private bool triggered = false;
     private bool finished = false;
     private bool updated = false;
     public Button startButton;
+    private Score_Display scoreHolder;
 
     void Start()
     {
+        Physics2D.autoSimulation = false;
         hazards = GameObject.FindWithTag("Hazards");
-        scoreHolder = GameObject.Find("Score Display").GetComponent<Score_Display>();
-
+        scoreHolder = GetComponent<Score_Display>();
         startButton.onClick.AddListener(StartHazards);
     }
 
@@ -36,6 +36,12 @@ public class HazardManager : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+
+        }
+
         if (!finished)
         {
             finished = true;

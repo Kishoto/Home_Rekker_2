@@ -6,7 +6,7 @@ public class GameData : MonoBehaviour
 {
     internal static int totalShopPurchasePrice = 0;
 
-    internal static int playerFunds = 100;
+    internal static int playerFunds = 10000;
 
     internal static Dictionary<int, string> objectMaterials = new Dictionary<int, string>
     {

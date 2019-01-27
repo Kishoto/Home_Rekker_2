@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Score_Display : MonoBehaviour
 {
-    public Text scoretext;
+    public TMP_Text scoretext;
     public int score;
     public int temp = 0;
+
+    public GameObject scorePanel;
 
     private GameObject Figures;
     // Start is called before the first frame update
@@ -43,6 +46,7 @@ public class Score_Display : MonoBehaviour
             }
         }
 
+        scorePanel.SetActive(true);
         scoretext.text = "Score: " + score + "\n Press R to Restart \n Press L for Level Select";
     }
 }
