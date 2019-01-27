@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RainCleanup : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         Destroy(gameObject);
     }

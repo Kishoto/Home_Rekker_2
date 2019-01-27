@@ -33,13 +33,14 @@ public class SunHazard : Hazard
             float raySource = self.position.x - raySeparation * ((rayCount - 1) / 2);
             for (int i = 0; i < rayCount; i++)
             {
-                RaycastHit hit;
-                Vector3 source = new Vector3(raySource, self.position.y, self.position.z);
-                if (Physics.Raycast(source, Vector3.down, out hit, 10.0f))
+                RaycastHit2D[] hit = new RaycastHit2D[1];
+                ContactFilter2D contact = new ContactFilter2D();
+                Vector2 source = new Vector2(raySource, self.position.y);
+                if (Physics2D.Raycast(source, Vector2.down, contact, hit, 10.0f) > 0)
                 {
-                    if (hit.collider.CompareTag("Person"))
+                    if (hit[0].collider.CompareTag("Person"))
                     {
-                        Figure figure = hit.collider.GetComponent<Figure>();
+                        Figure figure = hit[0].collider.GetComponent<Figure>();
                         figure.heat += 1;
                         if (figure.heat >= 10)
                             figure._touched = true;

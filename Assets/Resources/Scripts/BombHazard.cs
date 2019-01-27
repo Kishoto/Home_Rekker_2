@@ -17,13 +17,21 @@ public class BombHazard : Hazard
     IEnumerator StartBomb()
     {
         yield return new WaitForSeconds(countdown);
-        Collider[] hits = Physics.OverlapSphere(self.position, bombRadius);
-        foreach (Collider thing in hits)
+        Collider2D[] hits = new Collider2D[100];
+        ContactFilter2D contact = new ContactFilter2D();
+        Physics2D.OverlapCircle(self.position, bombRadius, contact, hits);
+        Debug.Log(hits.Length);
+        foreach (Collider2D thing in hits)
         {
-            Rigidbody rb = thing.gameObject.GetComponent<Rigidbody>();
+            if (thing == null)
+                continue;
+            Debug.Log("!" + thing.name);
+            Rigidbody2D rb = thing.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.AddExplosionForce(bombForce, self.position, bombRadius);
+                Vector2 direction = rb.position - (Vector2)self.position;
+                float distance = direction.magnitude;
+                rb.AddForce(Mathf.Lerp(0, bombForce, 1 - distance) * direction);
             }
         }
         Destroy(self.gameObject);
