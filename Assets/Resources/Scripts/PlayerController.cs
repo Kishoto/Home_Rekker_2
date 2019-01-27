@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool selected;
     private int matcheck = 0;
     private int shapecheck = 0;
-    
+
+    private GameObject heldObject;
 
     // Start is called before the first frame update
     void Start()
@@ -56,18 +57,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             //Debug.Log(selectedItemShape);
             //Debug.Log(GameData.objectMaterials[selectedItemMaterial]);
-
             Debug.Log("mouseOnPlayArea: " + GameData.mouseOnPlayArea);
             Debug.Log("items: " + (inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]]));
             if (GameData.mouseOnPlayArea && inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]] > 0)
             {
-                
                 GameObject item = Instantiate(GameData.primitives[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]], Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity, placedObjectParent);
                 item.transform.SetPositionAndRotation(new Vector3(item.transform.position.x, item.transform.position.y, -1), Quaternion.identity);
                 inventory[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]]--;
                 DrawInventory();
             }
-
         }
     }
 
@@ -87,6 +85,47 @@ public class PlayerController : MonoBehaviour
                 GameObject gO = Instantiate(Resources.Load<GameObject>("Prefabs/inventoryImages/" + item.Key), inventoryPanel.transform);
                 gO.GetComponentInChildren<TMP_Text>().text = "x" + item.Value.ToString("N0");
             }
+        }
+    }
+
+    public void InventoryItemSelected()
+    {
+        //Debug.Log("Hello");
+        if(heldObject != null)
+        {
+            Destroy(heldObject);
+            heldObject = Instantiate(GameData.primitives[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]], Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity, placedObjectParent);
+            StartCoroutine("UpdateHeldObjectPos");
+        }
+        else
+        {
+            heldObject = Instantiate(GameData.primitives[GameData.objectShapes[selectedItemShape] + "-" + GameData.objectMaterials[selectedItemMaterial]], Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity, placedObjectParent);
+            StartCoroutine("UpdateHeldObjectPos");
+        }
+    }
+
+    IEnumerator UpdateHeldObjectPos()
+    {
+        while(true)
+        {
+            
+            Debug.Log("1");
+            bool error = false;
+            try
+            {
+                if (inventory[heldObject.name.Replace("(Clone)", "")] <= 0)
+                {
+                    Destroy(heldObject);
+                }
+                heldObject.transform.SetPositionAndRotation(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Quaternion.identity);
+            }
+            catch (MissingReferenceException)
+            {
+                Debug.Log("error");
+                error = true;
+            }
+            if (error) yield return null;
+            else yield return new WaitForFixedUpdate();
         }
     }
 
