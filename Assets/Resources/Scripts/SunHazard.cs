@@ -36,7 +36,7 @@ public class SunHazard : Hazard
                 RaycastHit2D[] hit = new RaycastHit2D[1];
                 ContactFilter2D contact = new ContactFilter2D();
                 Vector2 source = new Vector2(raySource, self.position.y);
-                if (Physics2D.Raycast(source, Vector2.down, contact, hit, 10.0f) > 0)
+                if (Physics2D.Raycast(source, Vector2.down, contact, hit, 40.0f) > 0)
                 {
                     if (hit[0].collider.CompareTag("Person"))
                     {
