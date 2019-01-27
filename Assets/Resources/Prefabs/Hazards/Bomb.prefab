@@ -49,8 +49,8 @@ MonoBehaviour:
   finished: 0
   self: {fileID: 8397591653109293138}
   countdown: 2.5
-  bombRadius: 20
-  bombForce: 10000
+  bombRadius: 10
+  bombForce: 1000
 --- !u!212 &913814597363646514
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,5 +134,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

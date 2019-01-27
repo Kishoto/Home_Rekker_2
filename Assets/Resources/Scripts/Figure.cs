@@ -12,7 +12,6 @@ public class Figure : MonoBehaviour
         if (!other.collider.gameObject.CompareTag("Ground"))
         {
             _touched = true;
-            Debug.Log("Check: " + other.collider.gameObject.name);
         }
     }
 }

@@ -20,10 +20,9 @@ public class BombHazard : Hazard
         Collider2D[] hits = new Collider2D[100];
         ContactFilter2D contact = new ContactFilter2D();
         Physics2D.OverlapCircle(self.position, bombRadius, contact, hits);
-        Debug.Log(hits.Length);
         foreach (Collider2D thing in hits)
         {
-            if (thing == null)
+            if (thing == null || thing == self.gameObject.GetComponent<Collider2D>())
                 continue;
             Debug.Log("!" + thing.name);
             Rigidbody2D rb = thing.gameObject.GetComponent<Rigidbody2D>();
@@ -31,7 +30,7 @@ public class BombHazard : Hazard
             {
                 Vector2 direction = rb.position - (Vector2)self.position;
                 float distance = direction.magnitude;
-                rb.AddForce(Mathf.Lerp(0, bombForce, 1 - distance) * direction);
+                rb.AddForce(Mathf.Lerp(0, bombForce, 1 - distance) * direction, ForceMode2D.Impulse);
             }
         }
         Destroy(self.gameObject);
