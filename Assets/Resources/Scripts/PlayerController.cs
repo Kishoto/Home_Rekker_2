@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     internal static int selectedItemShape = 0;
     internal static Dictionary<string, int> inventory;
     public GameObject inventoryPanel;
+    public GameObject sidebar;
     public bool selected;
     private int matcheck = 0;
     private int shapecheck = 0;
@@ -70,6 +71,12 @@ public class PlayerController : MonoBehaviour
         if (Input.mouseScrollDelta.y != 0 && heldObject != null)
         {
             heldObject.transform.Rotate(new Vector3(0, 0, Input.mouseScrollDelta.y * 10));
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            sidebar.SetActive(!sidebar.activeInHierarchy);
+            if (!sidebar.activeInHierarchy)
+                GameData.mouseOnPlayArea = true;
         }
     }
 
