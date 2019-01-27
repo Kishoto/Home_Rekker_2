@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
@@ -77,6 +78,14 @@ public class PlayerController : MonoBehaviour
             sidebar.SetActive(!sidebar.activeInHierarchy);
             if (!sidebar.activeInHierarchy)
                 GameData.mouseOnPlayArea = true;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene("levelSelect");
         }
     }
 

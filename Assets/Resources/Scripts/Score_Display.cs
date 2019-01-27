@@ -42,7 +42,7 @@ public class Score_Display : MonoBehaviour
                 score += kvp.Value * cost;
             }
         }
-        
-        scoretext.text = "Score: " + score;
+
+        scoretext.text = "Score: " + score + "\n Press R to Restart \n Press L for Level Select";
     }
 }

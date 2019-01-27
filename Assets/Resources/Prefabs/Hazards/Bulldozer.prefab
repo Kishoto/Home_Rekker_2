@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1524908649313979626}
   - component: {fileID: 44819608251307539}
   - component: {fileID: 2202220930156237518}
+  - component: {fileID: 3695850074860387896}
   m_Layer: 0
   m_Name: Bulldozer
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300360, guid: 39639babb478f2443b75fefb2bab83fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1aa79a6d1da9cf345b28c60194cbf3ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +138,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.625}
+    oldSize: {x: 0.36, y: 0.39}
     newSize: {x: 2.25, y: 2.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,3 +152,22 @@ PolygonCollider2D:
       - {x: -1.125, y: -1.3125}
       - {x: 1.125, y: -1.3125}
       - {x: 0.9584595, y: 0.6255199}
+--- !u!95 &3695850074860387896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621478201506439668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca1d03fabf00b3048bd05074a7187b7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
