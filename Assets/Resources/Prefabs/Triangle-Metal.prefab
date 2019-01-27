@@ -11,32 +11,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triangle-Metal
       objectReference: {fileID: 0}
-    - target: {fileID: 7552387871370946706, guid: 36a4196eb565fe947b576b7a89404e8e,
-        type: 3}
-      propertyPath: m_Mass
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300038, guid: 492009c515e5f794591a7b972a2f1cfb,
-        type: 3}
     - target: {fileID: 2005800735, guid: 36a4196eb565fe947b576b7a89404e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -80,6 +54,32 @@ PrefabInstance:
     - target: {fileID: 2005800735, guid: 36a4196eb565fe947b576b7a89404e8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127186674191325033, guid: 36a4196eb565fe947b576b7a89404e8e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300038, guid: 492009c515e5f794591a7b972a2f1cfb,
+        type: 3}
+    - target: {fileID: 7552387871370946706, guid: 36a4196eb565fe947b576b7a89404e8e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a4196eb565fe947b576b7a89404e8e, type: 3}
