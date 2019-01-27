@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Plugins.meta
+guid: 720712be6e31c444f88f57bb85bf5fa5
+folderAsset: yes
+timeCreated: 1504268238
+licenseType: Store
+DefaultImporter:
+  userData:
+  assetBundleName:
+  assetBundleVariant:
+=======
+guid: fa17763585bf43f409fbfd8c6896893a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> 1184ff4e202dc85d58a9b238ba1599f663a9b0bd:Assets/Resources/Materials/16tiles_15.asset.meta
