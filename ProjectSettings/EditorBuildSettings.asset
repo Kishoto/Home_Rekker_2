@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 70dd8a396855ec740ba21d1dadf90c5e
+  - enabled: 1
+    path: Assets/Scenes/Urban Level 1.unity
+    guid: 2bdcf3bd197ea9749b49543eb94cf826
   m_configObjects: {}
