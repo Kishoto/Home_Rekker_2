@@ -27,11 +27,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triangle-Hay
       objectReference: {fileID: 0}
-    - target: {fileID: 8054244256300211548, guid: 955723ca1483c1d488f4217b2e3090e0,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 319197849205841037}
     - target: {fileID: 9008979904411865934, guid: 955723ca1483c1d488f4217b2e3090e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -137,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8054244256300211548, guid: 955723ca1483c1d488f4217b2e3090e0,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 319197849205841037}
     - target: {fileID: 3894595612814625628, guid: 955723ca1483c1d488f4217b2e3090e0,
         type: 3}
       propertyPath: shape
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 3894595612814625628, guid: 955723ca1483c1d488f4217b2e3090e0,
         type: 3}
       propertyPath: material
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3352530578936410492, guid: 955723ca1483c1d488f4217b2e3090e0,
         type: 3}
