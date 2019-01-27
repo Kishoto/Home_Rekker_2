@@ -21,6 +21,7 @@ public class SunHazard : Hazard
     IEnumerator StartSun()
     {
         sunny = true;
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
         yield return new WaitForSeconds(time);
         sunny = false;
         finished = true;
