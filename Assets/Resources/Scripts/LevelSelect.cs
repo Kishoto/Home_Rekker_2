@@ -10,14 +10,20 @@ public class LevelSelect : MonoBehaviour
     public Button desertButton;
     public Button northPoleButton;
     public Button cityButton;
-
+    public Button mainMenuButton;
     // Start is called before the first frame update
     void Start()
     {
+        mainMenuButton.onClick.AddListener(LoadMainMenu);
         rainforestButton.onClick.AddListener(LoadRainforest);
         desertButton.onClick.AddListener(LoadDesert);
         northPoleButton.onClick.AddListener(LoadNorthPole);
         cityButton.onClick.AddListener(LoadCity);
+    }
+
+    void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     void LoadRainforest()
