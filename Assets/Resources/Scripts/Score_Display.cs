@@ -33,6 +33,15 @@ public class Score_Display : MonoBehaviour
             }
             score += temp;
         }
+        foreach (KeyValuePair<string,int> kvp in PlayerController.inventory)
+        {
+            if (kvp.Value > 0)
+            {
+                string key = kvp.Key;
+                int cost = GameData.itemPrices[key];
+                score += kvp.Value * cost;
+            }
+        }
         
         scoretext.text = "Score: " + score;
     }
