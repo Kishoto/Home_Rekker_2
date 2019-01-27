@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 1125327958}
   - component: {fileID: 1125327961}
   - component: {fileID: 1125327962}
+  - component: {fileID: 1125327963}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -893,6 +894,19 @@ MonoBehaviour:
   tumbleweed: {fileID: 6154771828308685851, guid: ef030dd278125e545aeb16ecc1e1d212,
     type: 3}
   timer: 3
+--- !u!114 &1125327963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125327957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fde5c5d3725cd042aa6a5ca0dd2bb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 1508627590}
 --- !u!1 &1477530810
 GameObject:
   m_ObjectHideFlags: 0

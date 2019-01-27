@@ -18,9 +18,4 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("levelSelect");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
