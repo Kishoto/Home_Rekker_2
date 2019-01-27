@@ -12,6 +12,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hut-Metal
       objectReference: {fileID: 0}
+    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: ca111816ab435e643a95d0425ec9769a,
+        type: 3}
+    - target: {fileID: 5783735758637647889, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4665883248466254957, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,32 +92,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460955540675437840, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300004, guid: ca111816ab435e643a95d0425ec9769a,
-        type: 3}
-    - target: {fileID: 5783735758637647889, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
-        type: 3}
-      propertyPath: m_Mass
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5063361333093281495, guid: e9c1e1fc8a4c388419cffb19f0fab9f6,
         type: 3}

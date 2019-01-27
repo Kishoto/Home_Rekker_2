@@ -1366,12 +1366,12 @@ PrefabInstance:
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.95
+      value: -7.93
       objectReference: {fileID: 0}
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.46
+      value: -6.25
       objectReference: {fileID: 0}
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
@@ -4344,6 +4344,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282511051}
   m_CullTransparentMesh: 0
+--- !u!1 &323791613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1278601546622643004, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
+    type: 3}
+  m_PrefabInstance: {fileID: 1310114124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &323791614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323791613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef8f5e32ddf2f243b8d8d1f77318efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finished: 0
+  self: {fileID: 0}
+  delayTime: 0
+  velocityX: 5
+  velocityY: 5
+  runTime: 5
 --- !u!1 &332516120
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,6 +8025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: velocity
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 44819608251307539, guid: d51cf71f9fd2b6944bb6ebb6c5aede99,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d51cf71f9fd2b6944bb6ebb6c5aede99, type: 3}
@@ -12612,8 +12641,8 @@ MonoBehaviour:
   finished: 0
   self: {fileID: 0}
   delayTime: 0
-  velocityX: 5
-  velocityY: 5
+  velocityX: 0
+  velocityY: 10
   runTime: 5
 --- !u!1 &790315194
 GameObject:
@@ -21926,12 +21955,12 @@ PrefabInstance:
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8325498
+      value: 16.07
       objectReference: {fileID: 0}
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.110894
+      value: -5.19
       objectReference: {fileID: 0}
     - target: {fileID: 1927000477744749196, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
         type: 3}
@@ -21978,7 +22007,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3832452426961638043, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07,
+        type: 3}
+      propertyPath: velocity
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3832452426961638043, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 09d5d4ab9a5cbf742bed0b70abfa8d07, type: 3}
 --- !u!1001 &1316516874
 PrefabInstance:
